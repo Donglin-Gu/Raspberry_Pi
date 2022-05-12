@@ -201,8 +201,8 @@ if __name__=='__main__':
     try:
         wav_path = sys.argv[1]
         velocity = float(sys.argv[2])
-        start_offset = sys.argv[3]
-        end_offset = sys.argv[4]
+        start_offset = float(sys.argv[3])
+        end_offset = float(sys.argv[4])
         img_path = sys.argv[5]
         wKA_FMCW(wav_path, velocity, start_offset, end_offset, img_path)
     except Exception as e:
