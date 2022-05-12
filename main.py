@@ -1,7 +1,3 @@
-# Author: Gu Donglin
-# Student ID: 3180112692
-# INTL ID: Donglin.18@intl.zju.edu.cn
-# Net ID: dgu4@illinois.edu
 import sys
 import soundfile
 from scipy.fftpack import fft, fftshift, ifft2
@@ -194,20 +190,20 @@ def wKA_FMCW(wavpath, v, start_offset, end_offset, out_img_path):
 
 
 if __name__=='__main__':
-    # (wav_path, velocity, start_offset, end_offset, img_path) = [
-    #     './wav/sample.wav',
-    #     '2', '0', '0', './images']
-    # wKA_FMCW(wav_path, velocity, start_offset, end_offset, img_path)
-    try:
-        wav_path = sys.argv[1]
-        velocity = float(sys.argv[2])
-        start_offset = float(sys.argv[3])
-        end_offset = float(sys.argv[4])
-        img_path = sys.argv[5]
-        wKA_FMCW(wav_path, velocity, start_offset, end_offset, img_path)
-    except Exception as e:
-        print("Input argvs are : {}".format(sys.argv))
-        print("Please check args: 'python main.py drone_velocity output_img_path start_offset end_offset'")
-        print(e)
+    (wav_path, velocity, start_offset, end_offset, img_path) = [
+        './wav/sample.wav',
+        '2', '0', '0', './images']
+    wKA_FMCW(wav_path, velocity, start_offset, end_offset, img_path)
+    # try:
+    #     wav_path = sys.argv[1]
+    #     velocity = float(sys.argv[2])
+    #     start_offset = float(sys.argv[3])
+    #     end_offset = float(sys.argv[4])
+    #     img_path = sys.argv[5]
+    #     wKA_FMCW(wav_path, velocity, start_offset, end_offset, img_path)
+    # except Exception as e:
+    #     print("Input argvs are : {}".format(sys.argv))
+    #     print("Please check args: 'python main.py drone_velocity output_img_path start_offset end_offset'")
+    #     print(e)
 
 
